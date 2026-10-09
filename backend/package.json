@@ -1,1 +1,1 @@
-{"name":"chaa-store-backend","version":"1.0.0","description":"Chaa Store - platform joki game (Nadya Paramesti Amirasyifa, NIM 60225070)","main":"server.js","scripts":{"start":"node server.js"},"dependencies":{"express":"^4.19.2"}}
+{"name":"nadzz-joki backend","version":"1.0.0","description":"Nadzz Joki - platform yang menyediakan jasa joki game favoritmu","main":"server.js","scripts":{"start":"node server.js"},"dependencies":{"express":"^4.19.2"}}
