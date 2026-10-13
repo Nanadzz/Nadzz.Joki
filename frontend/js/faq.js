@@ -1,7 +1,7 @@
 import {esc} from './api.js';
 export const FAQ=[
- ['Bagaimana alur pemesanan?','Pilih paket di halaman Pesan, isi data akun, lalu bayar penuh atau DP. Setelah lunas, pesanan masuk antrian dan ditugaskan ke worker yang cocok dengan game dan kapasitasnya.'],
- ['Apa itu DP / booking?','Kamu bisa membayar uang muka (persentase ditentukan admin) untuk mereservasi slot. Sisanya dilunasi sebelum pesanan masuk antrian. DP yang tidak dilunasi sampai batas waktu reservasi bisa hangus sesuai aturan admin.'],
+ ['Bagaimana alur pemesanan?','Pilih paket di halaman Pesan, isi data akun, lalu bayar lunas lewat payment gateway. Setelah pembayaran terkonfirmasi, pesanan masuk antrian dan ditugaskan ke worker yang cocok dengan game dan kapasitasnya.'],
+ ['Bagaimana cara pembayarannya?','Pembayaran dilakukan penuh di muka lewat payment gateway. Setelah terkonfirmasi, pesananmu langsung masuk antrian dan ditugaskan ke worker. Pesanan yang belum dibayar tetap tersimpan di Pesanan Saya.'],
  ['Apakah akun game saya aman?','Kredensial dienkripsi di server, hanya worker yang mengerjakan yang bisa membukanya selama pesanan berjalan, dan dihapus otomatis saat pesanan selesai. Perlu diketahui: sebagian game melarang joki dalam ketentuan layanannya, sehingga selalu ada risiko terhadap akun. Pertimbangkan sendiri sebelum memesan.'],
  ['Bagaimana memantau progres?','Gunakan menu Cek Transaksi dengan kode pesanan, atau buka Pesanan Saya setelah masuk. Progres dan riwayat status diperbarui oleh worker.'],
  ['Kapan pesanan dianggap selesai?','Worker menandai selesai, lalu kamu konfirmasi. Jika tidak ada respons dalam batas waktu auto-confirm (bawaan 24 jam), pesanan otomatis terverifikasi dan bagi hasil dicatat.'],

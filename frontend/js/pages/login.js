@@ -17,6 +17,6 @@ $('#f').onsubmit=async e=>{e.preventDefault();const m=$('#msg');m.classList.add(
  if(!e.target.reportValidity())return;
  const b=fd(e.target);b.skills=[...document.querySelectorAll('#skills input:checked')].map(i=>i.value);
  $('#sb').disabled=true;
- try{const s=await api(reg?'/auth/register':'/auth/login',{body:b});setS(s);toast('Berhasil masuk');
-  setTimeout(()=>location.href=next||roleHome(s.user.role),400)}
+ try{const s=await api(reg?'/auth/register':'/auth/login',{body:b});setS(s);toast(s.pending?'Pendaftaran terkirim, menunggu persetujuan admin':'Berhasil masuk');
+  setTimeout(()=>location.href=next||roleHome(s.user.role),s.pending?1400:400)}
  catch(x){m.textContent=x.message;m.classList.remove('hidden')}finally{$('#sb').disabled=false}};

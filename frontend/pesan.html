@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="id"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Pesan Layanan Joki — Nadzz Joki</title><meta name="description" content="Pilih paket joki, isi data akun, dan bayar dengan DP atau lunas.">
+<title>Pesan Layanan Joki — Nadzz Joki</title><meta name="description" content="Pilih paket joki, isi data akun, lalu bayar lunas lewat gateway.">
 <meta name="theme-color" content="#02040a"><link rel="manifest" href="/manifest.json"><link rel="icon" href="/icons/nadzzjoki.png">
 <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700&family=Manrope:wght@400;500;700&display=swap" rel="stylesheet">
 <script src="https://cdn.tailwindcss.com"></script><script src="/js/tailwind.config.js"></script><link rel="stylesheet" href="/css/theme.css"><link rel="stylesheet" href="/css/fx.css">
@@ -17,9 +17,8 @@
    <label class="lbl">Target pengerjaan<textarea name="targetDescription" rows="3" class="field" required placeholder="Contoh: Abyss lantai 12 full star, karakter utama..."></textarea></label>
    <label class="lbl">Catatan untuk worker (opsional)<textarea name="notes" rows="2" class="field"></textarea></label>
    <p class="text-xs text-slate-500">🔐 Kredensial dienkripsi dan dihapus otomatis setelah pesanan selesai. Sebagian game melarang joki; risiko akun ditanggung pemilik akun.</p></form></section>
-  <section id="p3" class="hidden glass rounded-2xl p-6 grid gap-4"><h2 class="font-semibold text-lg">Metode pembayaran</h2>
-   <label class="glass rounded-xl p-4 flex gap-3 cursor-pointer"><input type="radio" name="pay" value="full" checked><div><b>Bayar lunas</b><p class="text-sm text-slate-400" id="fullTxt"></p></div></label>
-   <label class="glass rounded-xl p-4 flex gap-3 cursor-pointer"><input type="radio" name="pay" value="dp"><div><b>Bayar DP (reservasi slot)</b><p class="text-sm text-slate-400" id="dpTxt"></p></div></label>
+  <section id="p3" class="hidden glass rounded-2xl p-6 grid gap-4"><h2 class="font-semibold text-lg">Pembayaran</h2>
+   <div class="glass rounded-xl p-4"><b>Bayar lunas</b><p class="text-sm text-slate-400" id="fullTxt"></p></div>
    <p class="text-xs text-slate-500">Pembayaran memakai gateway sandbox untuk demo. Pesanan yang belum dibayar tetap tersimpan di Pesanan Saya.</p></section>
   <section id="done" class="hidden glass glow rounded-2xl p-8 text-center"></section>
   <div id="nav" class="flex justify-between mt-5"><button id="back" class="btn-line rounded-xl px-6 py-2.5 invisible">Kembali</button><button id="next" class="btn-grad rounded-xl px-7 py-2.5">Lanjut</button></div>
