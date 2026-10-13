@@ -16,5 +16,6 @@ export async function api(path,{method,body,headers,retry}={}){
  if(r.status===401&&S?.refreshToken&&!retry){
   const rr=await fetch('/api/auth/refresh',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({refreshToken:S.refreshToken})});
   if(rr.ok){setS(await rr.json());return api(path,{method,body,headers,retry:1})}setS(null)}
- const d=await r.json().catch(()=>({}));if(!r.ok)throw new Error(d.error||'Terjadi kesalahan');return d}
-let cfg;export const config=()=>cfg??=api('/config');
+ const d=await r.json().catch(()=>null);if(!r.ok)throw new Error(d?.error||(d?'Terjadi kesalahan':'Server belum tersambung, coba lagi nanti atau hubungi admin'));return d??{}}
+export const DEFAULT_WA='6285656317710'; // cadangan jika server belum tersambung; format wa.me tanpa + dan tanpa 0 di depan
+let cfg;export const config=()=>cfg??=api('/config').catch(()=>({brand:'Nadzz Joki',adminWhatsapp:DEFAULT_WA}));
